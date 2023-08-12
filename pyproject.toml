@@ -1,0 +1,28 @@
+[build-system]
+requires = ["hatchling", "boto3"]
+build-backend = "hatchling.build"
+
+[project]
+name = "aws-misc"
+version = "0.1"
+authors = [
+  { name="Manu Halbrügge", email="manu.halbruegge@green-consensus.de" },
+]
+description = "Some helper scripts for working with aws."
+readme = "README.md"
+requires-python = ">=3.7"
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "License :: OSI Approved :: MIT License",
+    "Operating System :: OS Independent",
+]
+
+[project.urls]
+"Homepage" = "https://github.com/mhalbruegge/aws-misc"
+"Bug Tracker" = "https://github.com/mhalbruegge/aws-misc/issues"
+
+[tool.hatch.version]
+path = "aws_misc/__init__.py"
+
+[tool.isort]
+profile = "black"
