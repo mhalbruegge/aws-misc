@@ -38,7 +38,9 @@ def download_all_files_in_s3_directory(bucket_name, s3_directory, local_director
             local_path = os.path.join(
                 local_directory, s3_path.replace(s3_directory, "")
             )
-            futures.append(executor.submit(download_from_s3, s3_path, local_path))
+            futures.append(
+                executor.submit(download_from_s3, bucket_name, s3_path, local_path)
+            )
 
         for future in futures:
             future.result()
